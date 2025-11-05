@@ -8,6 +8,8 @@ const morgan = require("morgan");
 const presensiRoutes = require("./routes/presensi");
 const reportRoutes = require("./routes/reports");
 
+const authRoutes = require("./routes/auth");
+app.use("/api/auth", authRoutes);
 // Middleware
 app.use(cors());
 app.use(express.json());
